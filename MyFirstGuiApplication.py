@@ -3,11 +3,11 @@ def onSubmitButtonClicked():
       #print("Yay!It works!")
       daysAttendedNum=int(daysAttendedString.get())
       if daysAttendedNum==4:
-        print(nameString.get(), "is elligible for certificate")
-        resultString.set("{} is eligible for the certificate".format(nameString.get()))
+        print(nameString.get(), "has passed the test")
+        resultString.set("{} has passed the test".format(nameString.get()))
       else:
-        print(nameString.get(),"is not eligible for certificate")
-        resultString.set("{} is not eligible for certificate".format(nameString.get()))
+        print(nameString.get(),"has to retake the test")
+        resultString.set("{} has to retake the test".format(nameString.get()))
 def onClearButtonClicked():
       nameString.set("")
       daysAttendedString.set("")
@@ -29,7 +29,7 @@ todaysTopic.pack()
 nameLabel=Label(text = "Enter your name: ")
 nameLabel.place(x=20,y=50)
 
-daysAttended=Label(text= "Enter the number of days attended:")
+daysAttended=Label(text= "Enter the number of questions you got right:")
 daysAttended.place(x=20,y=70)
 
 #Taking in values from the user
